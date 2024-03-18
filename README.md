@@ -1,4 +1,4 @@
-# eslint-config-vocovo
+# eslint-config-v2
 
 This VoCoVo linting standard expects developers to use Prettier for code formatting, and ESLint for code smell. This config uses Prettier both inside and outside ESLint. ESLint is only concerned with Javascript, but Prettier can format many different languages. The detail below explains how to use Prettier to good effect in both situations.
 
