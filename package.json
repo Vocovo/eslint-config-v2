@@ -1,0 +1,39 @@
+{
+  "name": "eslint-config-v2",
+  "version": "1.0.0",
+  "description": "A reasonable lint standard for VoCoVo javascript projects. Uses ESLint and Prettier",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix"
+  },
+  "keywords": [
+    "javascript",
+    "ecmascript",
+    "eslint",
+    "lint",
+    "config",
+    "prettier"
+  ],
+  "repository": "git@github.com:vocovo/eslint-config-vocovo.git",
+  "author": "Vocovo",
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier-standard": "^4.0.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier-config-standard": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  },
+  "peerDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  }
+}
