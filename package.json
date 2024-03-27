@@ -15,7 +15,7 @@
     "config",
     "prettier"
   ],
-  "repository": "git@github.com:vocovo/eslint-config-vocovo.git",
+  "repository": "git@github.com:vocovo/eslint-config-v2.git",
   "author": "Vocovo",
   "license": "MIT",
   "dependencies": {
