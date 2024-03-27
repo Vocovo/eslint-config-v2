@@ -1,5 +1,3 @@
-const prettierrc = require('./prettierrc')
-
 module.exports = {
   extends: 'love',
   env: {
@@ -29,7 +27,6 @@ module.exports = {
       },
     ],
     'no-warning-comments': 'warn',
-    'prettier/prettier': ['error', prettierrc],
   },
   globals: {
     cy: true,
