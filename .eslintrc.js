@@ -1,9 +1,28 @@
 module.exports = {
-  extends: 'love',
+  root: false,
+  extends: [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: "module",
+  },
+  plugins: ["@typescript-eslint", "@graphql-eslint"],
   env: {
+    browser: false,
+    commonjs: true,
+    es6: true,
     jest: true,
+    node: true,
   },
   rules: {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "jsx-a11y/href-no-hash": ["off"],
+    "import/extension": "off",
     'generator-star-spacing': ['warn'],
     'no-console': [
       'error',
@@ -27,9 +46,21 @@ module.exports = {
       },
     ],
     'no-warning-comments': 'warn',
+    "max-len": [
+      "warn",
+      {
+        code: 100,
+        tabWidth: 2,
+        comments: 100,
+        ignoreComments: false,
+        ignoreTrailingComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
   },
-  globals: {
-    cy: true,
-    Cypress: true,
-  },
-}
+  ignorePatterns: ["db/*"],
+};
+
