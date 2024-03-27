@@ -1,7 +1,7 @@
 const prettierrc = require('./prettierrc')
 
 module.exports = {
-  extends: ['prettier-standard'],
+  extends: 'love',
   env: {
     jest: true,
   },
@@ -28,12 +28,8 @@ module.exports = {
         ignoreRestSiblings: true,
       },
     ],
-    'standard/no-callback-literal': 0,
     'no-warning-comments': 'warn',
     'prettier/prettier': ['error', prettierrc],
-    '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
-    'no-useless-constructor': 'off',
-    '@typescript-eslint/no-useless-constructor': ['error'],
   },
   globals: {
     cy: true,
