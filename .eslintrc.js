@@ -10,7 +10,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "@graphql-eslint"],
+  plugins: ["@typescript-eslint"],
   env: {
     browser: false,
     commonjs: true,
