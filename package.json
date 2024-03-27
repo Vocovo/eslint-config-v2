@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/parser": "^7.4.0",
     "eslint": ">= 8",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.8.0",
