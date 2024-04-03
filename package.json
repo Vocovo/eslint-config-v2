@@ -19,9 +19,10 @@
   "author": "Vocovo",
   "license": "MIT",
   "dependencies": {
+    "@babel/eslint-parser": "^7.24.1",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.0.0",
-    "eslint": ">= 8",
+    "eslint": "^8.57.0",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
@@ -29,7 +30,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.0",
-    "typescript": ">= 5"
+    "typescript": "^5.4.3"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
