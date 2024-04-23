@@ -2,6 +2,6 @@ module.exports = {
   semi: false,
   jsxSingleQuote: true,
   singleQuote: true,
-  trailingComma: 'all',
+  trailingComma: "all",
   printWidth: 120,
-}
+};

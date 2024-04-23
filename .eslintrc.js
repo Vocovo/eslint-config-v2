@@ -23,29 +23,29 @@ module.exports = {
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "jsx-a11y/href-no-hash": ["off"],
     "import/extension": "off",
-    'generator-star-spacing': ['warn'],
-    'no-console': [
-      'error',
+    "generator-star-spacing": ["warn"],
+    "no-console": [
+      "error",
       {
-        allow: ['warn', 'error', 'info', 'group', 'groupEnd'],
+        allow: ["warn", "error", "info", "group", "groupEnd"],
       },
     ],
-    'no-throw-literal': 0,
-    'no-extend-native': 0,
+    "no-throw-literal": 0,
+    "no-extend-native": 0,
     complexity: [
-      'error',
+      "error",
       {
         max: 10,
       },
     ],
-    'func-names': 0,
-    'no-unused-vars': [
+    "func-names": 0,
+    "no-unused-vars": [
       2,
       {
         ignoreRestSiblings: true,
       },
     ],
-    'no-warning-comments': 'warn',
+    "no-warning-comments": "warn",
     "max-len": [
       "warn",
       {
@@ -63,4 +63,3 @@ module.exports = {
   },
   ignorePatterns: ["db/*"],
 };
-
