@@ -1,6 +1,6 @@
-### This Pull Request is associated with card(s) URL(s):
+### This Pull Request is associated with Jira ticket:
 
-...
+https://vocovo.atlassian.net/browse/UE-???
 
 ### Brief summary of the problem/need for this work:
 

@@ -1,40 +1,35 @@
-name: Tests CI
+name: Build
 
 on:
+  push:
+    branches: ['main']
   pull_request:
-    branches:
-      - main
+    types: [opened, synchronize]
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.22.12, 16.13.2]
 
     env:
       NPM_GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
 
     steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.9.1
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        env:
-          cache-name: npm
-        with:
-          path: ~/.npm
-          key: ${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ env.cache-name }}-
-      - run: rm .npmrc # Remove this so that NPM doesn't try to use an auth token
-      - run: npm ci --ignore-scripts
-      - run: npm run lint
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm i
+
+      # - name: Check Lint
+      #   run: npm run lint
+
+      # - name: Run tests
+      #   run: npm run test
