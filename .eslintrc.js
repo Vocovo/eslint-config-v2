@@ -40,9 +40,10 @@ module.exports = {
     ],
     "func-names": 0,
     "no-unused-vars": [
-      2,
+      "error",
       {
         ignoreRestSiblings: true,
+        argsIgnorePattern: "^_",
       },
     ],
     "no-warning-comments": "warn",
