@@ -2,6 +2,16 @@
 
 This VoCoVo linting standard expects developers to use Prettier for code formatting, and ESLint for code smell. This config uses Prettier both inside and outside ESLint. ESLint is only concerned with Javascript, but Prettier can format many different languages. The detail below explains how to use Prettier to good effect in both situations.
 
+## Table of Contents
+
+- [Installation in your project](#installation-in-your-project)
+    - [For formatting independent of ESLint](#for-formatting-independent-of-eslint)
+- [Configuring VSCode so linting and auto-fixing work](#configuring-vscode-so-linting-and-auto-fixing-work)
+- [Maintenance](#maintenance)
+- [Publishing](#publishing)
+    - [PreRequisites](#prerequisites)
+    - [To publish a version](#to-publish-a-version)
+
 ## Installation in your project
 
 You will need to have `eslint` and `prettier` installed to use this: `npm install --save-dev eslint prettier`.
@@ -64,9 +74,30 @@ All contributions are welcome and encouraged. If this standard doesn't suit your
 
 ## Publishing
 
-To publish a version:
+### PreRequisites
+
+In github.com go to personal settings -> developer settings -> personal access tokens / tokens (classic).
+(you should be in https://github.com/settings/tokens)
+Click Generate new token -> Generate new token (classic)
+Give it a name, select options
+- `workflow`
+- `write:packages`
+- `read:public_key`
+
+Copy the new key.
+Add this to your project's `.npmrc`
+```
+//npm.pkg.github.com/:_authToken=${NPM_GITHUB_TOKEN}
+@vocovo:registry=https://npm.pkg.github.com
+```
+
+These connect by having your new key as an env variable named `NPM_GITHUB_TOKEN`!
+
+### To publish a version
 
 1. Create a PR which bumps the version number and get it reviewed and merged
-2. Create a release on Github with the new version as the tag and title (no description needed), the release should target `main`
-3. Authorise your NPM account either with `npm login` (if you have an account) or by using the `Publish token` listed at the bottom of the `NPM - Machine User` entry in 1Password. The publish token should be set in an environment variable `NPM_PUBLISH_TOKEN`. If you use the publish token, you will need to use the two factor code in 1Password when publishing.
-4. Checkout `main`, make sure the branch is up to date, and run `npm publish`.
+   1. Git will already create tags
+1. Create a release on Github with the new version as the tag and title (no description needed), the release should target `main`
+1. Checkout `main`, make sure the branch is up to date, and run `npm publish`.
+1. In whatever project that uses this new version run `npm i` or `npm update`...
+   1. This project will also require `.npmrc` to hold the auth token
