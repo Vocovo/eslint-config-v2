@@ -87,7 +87,7 @@ Give it a name, select options
 Copy the new key.
 Add this to your project's `.npmrc`
 ```
-//npm.pkg.github.com/:_authToken=${NPM_ACTIONS}
+//npm.pkg.github.com/:_authToken=${NPM_GITHUB_TOKEN}
 @vocovo:registry=https://npm.pkg.github.com
 ```
 
