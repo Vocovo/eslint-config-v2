@@ -91,7 +91,7 @@ Add this to your project's `.npmrc`
 @vocovo:registry=https://npm.pkg.github.com
 ```
 
-These connect by having your new key as an env variable named `NPM_ACTIONS`!
+These connect by having your new key as an env variable named `NPM_GITHUB_TOKEN`!
 
 ### To publish a version
 
