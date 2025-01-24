@@ -20,7 +20,6 @@ module.exports = {
   },
   rules: {
     "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "jsx-a11y/href-no-hash": ["off"],
     "import/extension": "off",
     "generator-star-spacing": ["warn"],
